@@ -6,6 +6,7 @@ import java.util.List;
 public class HealthCheckerThread extends Thread {
 
     private static final int HEALTH_CHECK_HISTORY_RATE = 10;
+    private static final int FIVE_SECOND_INTERVAL = 1000 * 5;
 
     private List<Boolean> healthCheckHistory = new ArrayList<>();
 
@@ -32,7 +33,7 @@ public class HealthCheckerThread extends Thread {
             }
 
             try {
-                Thread.sleep(100);
+                Thread.sleep(FIVE_SECOND_INTERVAL);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

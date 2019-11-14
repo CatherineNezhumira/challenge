@@ -23,7 +23,7 @@ public class HealthCheckLogger {
     }
 
     public static void logNetworkError() {
-        LOGGER.severe("Error while pinging service: %s");
+        LOGGER.severe("Error while pinging service");
     }
 
     public static void logHealthCheckSuccessRate(int successRate) {

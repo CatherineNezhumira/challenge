@@ -44,7 +44,6 @@ public class ServiceHealthCheck {
             if (response.body().equals(SUCCESS_RESPONSE_BODY)) {
                 return HealthCheckStatus.HEALTHY;
             } else {
-                System.out.println("INCORRECT!");
                 return HealthCheckStatus.INCORRECT_RESPONSE;
             }
 
